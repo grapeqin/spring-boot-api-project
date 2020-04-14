@@ -1,5 +1,6 @@
 package com.grapeqin.project.configurer;
 
+import java.util.Properties;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,9 @@ public class MyMapperConfig {
 	public MapperScannerConfigurer getMapperScannerConfigurer() {
 		MapperScannerConfigurer msc = new MapperScannerConfigurer();
 		msc.setBasePackage("com.grapeqin.project.dao");
+		Properties properties = new Properties();
+		properties.setProperty("notEmpty", "TRUE");
+		msc.setProperties(properties);
 		return msc;
 	}
 }

@@ -1,5 +1,7 @@
 package com.grapeqin.project.model;
 
+import javax.persistence.Id;
+
 import java.util.Date;
 import lombok.Data;
 
@@ -10,6 +12,7 @@ import lombok.Data;
  */
 @Data
 public class User {
+	@Id
 	private Long id;
 
 	private String name;

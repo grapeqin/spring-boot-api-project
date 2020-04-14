@@ -9,7 +9,8 @@ import lombok.Data;
 @Data
 @Builder
 public class Department {
-  @Id private Integer departmentId;
+
+	@Id private Integer departmentId;
 
   private String departmentName;
 }

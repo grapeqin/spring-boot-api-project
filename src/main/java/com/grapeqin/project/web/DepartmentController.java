@@ -47,8 +47,8 @@ public class DepartmentController {
 
   @PostMapping("/list")
   public Result list(
-      @RequestParam(defaultValue = "0") Integer page,
-      @RequestParam(defaultValue = "0") Integer size) {
+		  @RequestParam(defaultValue = "2") Integer page,
+		  @RequestParam(defaultValue = "1") Integer size) {
     PageHelper.startPage(page, size);
     List<Department> list = departmentService.findAll();
     PageInfo pageInfo = new PageInfo(list);
